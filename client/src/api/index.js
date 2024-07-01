@@ -4,7 +4,7 @@ import axios from 'axios';
 const storedProfile = localStorage.getItem("profile");
 const profile = storedProfile ? JSON.parse(storedProfile) : null;
 const api = axios.create({
-    baseURL: "http://localhost:5001/",
+    baseURL: "https://music-alpha-ruddy.vercel.app/",
     headers: {
         'Content-Type': 'application/json',
         'Authorization': profile ? `Bearer ${profile.token}` : ''
